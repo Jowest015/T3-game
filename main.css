@@ -8,7 +8,7 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-grow: 1;
   background-color: white;
 }
@@ -19,9 +19,11 @@
 
 .box {
   border: black solid 1px;
-  min-height: 30px;
-  min-width: 30px;
-  flex-grow: 1;
+  min-height: 165px;
+  min-width: 165px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 10em;
 }
 
 button {
