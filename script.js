@@ -1,7 +1,7 @@
 var gameActive = true;
 let currentPlayer = "X";
-let xScore = 0;
-let yScore = 0;
+let scoreX = 0;
+let scoreY = 0;
 var gameState = ["", "", "", "", "", "", "", "", ""]; //This holds the values from clicks on board
 
 //These will be the win, draw, and player turn messages at bottom
@@ -52,7 +52,8 @@ function ResultValidation() {
     }
   }
   if (roundWon) {
-    statusDisplay.innerHTML = winningMessage();//makes winning message and disables clicks
+    statusDisplay.innerHTML = winningMessage();//makes winning message and disables board
+    currentPlayer = currentPlayer = "X" ? scoreX++ : scoreY++;
     gameActive = false;
     return;
   }
