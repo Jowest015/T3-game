@@ -12,7 +12,9 @@ const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
 
 const gameScore = document.querySelector('.game--scoresheet');
 const xPlayer = () => `Player X ${scoreX}`;
-const yPlayer = () => `Player y ${scoreY}`;
+
+const gameScore1 = document.querySelector('.game--scoresheet1');
+const yPlayer = () => `Player O ${scoreY}`;
 
 const winningConditions = [
   [0, 1, 2],
@@ -53,7 +55,13 @@ function ResultValidation() {
   }
   if (roundWon) {
     statusDisplay.innerHTML = winningMessage();//makes winning message and disables board
-    currentPlayer = currentPlayer = "X" ? scoreX++ : scoreY++;
+    if (currentPlayer == "X") { //assigns win to current player
+      scoreX++;
+    } else if (currentPlayer == "O") {
+      scoreY++;
+    }
+    gameScore.innerHTML = xPlayer();
+    gameScore1.innerHTML = yPlayer();
     gameActive = false;
     return;
   }
