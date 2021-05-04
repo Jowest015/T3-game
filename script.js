@@ -1,5 +1,7 @@
 var gameActive = true;
 let currentPlayer = "X";
+let xScore = 0;
+let yScore = 0;
 var gameState = ["", "", "", "", "", "", "", "", ""]; //This holds the values from clicks on board
 
 //These will be the win, draw, and player turn messages at bottom
@@ -7,6 +9,10 @@ const statusDisplay = document.querySelector('.game--status');
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `It's a Draw Jim!`;
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
+
+const gameScore = document.querySelector('.game--scoresheet');
+const xPlayer = () => `Player X ${scoreX}`;
+const yPlayer = () => `Player y ${scoreY}`;
 
 const winningConditions = [
   [0, 1, 2],
