@@ -25,3 +25,16 @@ section {
 line-height: 100px;
   font-size: 60px;
 }
+
+.game--stats--container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 200px;
+  margin: 20px auto;
+}
+
+.stats {
+  width: 100px;
+  height: 20px;
+  border: solid 1px black;
+}

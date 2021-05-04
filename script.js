@@ -46,7 +46,7 @@ function ResultValidation() {
     }
   }
   if (roundWon) {
-    statusDisplay.innerHTML = winningMessage();//make winning message and disable clicks
+    statusDisplay.innerHTML = winningMessage();//makes winning message and disables clicks
     gameActive = false;
     return;
   }
@@ -81,5 +81,5 @@ function RestartGame() {
   .forEach(box => box.innerHTML = "");
 }
 
-document.querySelectorAll('.box').forEach(box => box.addEventListener('click', handleBoxClick));
+document.querySelectorAll('.box').forEach(box => box.addEventListener('click', BoxClick));
 document.querySelector('.game--restart').addEventListener('click', RestartGame);
