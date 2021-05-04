@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  text-align: center;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  height: 306px;
+  margin: 50px auto;
+  border: black 1px solid;
+}
+
+.box {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100px;
+  height: 100px;
+  box-shadow: black 0 0 0 1px;
+  border: 1px solid blue;
+  cursor: crosshair;
+line-height: 100px;
+  font-size: 60px;
+}
